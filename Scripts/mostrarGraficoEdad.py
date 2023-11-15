@@ -5,7 +5,7 @@ from dumpPorEdad import filtrar_edad
 def mostrarGraficoEdad(edad: int):
 	filtrar_edad(edad)
 
-	df = pd.read_csv(f'../CSV_nuevas/edad_{edad}.csv')
+	df = pd.read_csv(f'CSV_nuevas/edad_{edad}.csv')
 
 	# Convertir la columna 'FECHA_DEFUNCION' a tipo datetime
 	df['FECHA_DEFUNCION'] = pd.to_datetime(df['FECHA_DEFUNCION'], dayfirst=True)
